@@ -1,5 +1,26 @@
 import Data.Tuple
 
+-- Find date of event
+findDate :: String -> [(String, String)] -> String
+findDate event table = 
+    fst ((filter (\x -> event == (snd x)) table) !! 0)
+
+-- Get a list of all tuples with same date
+findEvents :: String -> [(String, String)] -> [(String, String)]
+findEvents event table =
+  filter (\x -> (fst x) == (findDate event table)) table
+
+-- Get events as a list of strings
+relatedEvents :: String -> [(String, String)] -> [String]
+relatedEvents event table = 
+    map (snd) (findEvents event table)
+
+
+
+
+
+
+
 relational_table = [
     ("May 5", "553 – The Second Council of Constantinople begins."),
     ("May 5", "1215 – Rebel barons renounce their allegiance to King John of England — part of a chain of events leading to the signing of the Magna Carta."),
@@ -237,17 +258,3 @@ relational_table = [
     ("December 25", "2012 – An Antonov An-72 plane crashes close to the city of Shymkent, killing 27 people.")
     ]
 
--- Find date of event
-findDate :: String -> [(String, String)] -> String
-findDate event table = 
-    fst ((filter (\x -> event == (snd x)) table) !! 0)
-
--- Get a list of all tuples with same date
-findEvents :: String -> [(String, String)] -> [(String, String)]
-findEvents event table =
-  filter (\x -> (fst x) == (findDate event table)) table
-
--- Get events as a list of strings
-relatedEvents :: String -> [(String, String)] -> [String]
-relatedEvents event table = 
-    map (snd) (findEvents event table)
