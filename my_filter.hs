@@ -5,8 +5,8 @@ deleteItem query (mat:rest) =
       then deleteItem query rest
       else mat : deleteItem query rest
 
-my_filter = filter (\x -> not (x == 5) )
-my_filter_ list = filter (\x -> not (x == 5) ) list
+deleteUsingFilter = filter (\x -> not (x == 5) )
+deleteUsingFilter_ list = filter (\x -> not (x == 5) ) list
 
 main = do
   putStrLn "Example 1: "  
