@@ -22,8 +22,7 @@ testWord word =
 
 
 -- Defined the function in parts
---genPermutations :: String -> [String]
-genPermutations a = [a]       -- Only one way to permute an empty set
+genPermutations [] = [[]]       -- Only one way to permute an empty set
 genPermutations [a] = [[a]]     -- Also only one way to permute a singleton
 genPermutations xs =            -- Everything else is reducable to the first two
   -- For i as every index in xs, concatenating the results of (startsWith i)
