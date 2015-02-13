@@ -17,14 +17,21 @@ import qualified Data.Text.ICU as ICU
 -- Count all of the words in a file
 takeHistogram :: String -> IO (H.BasicHashTable Text Int)
 takeHistogram path = do 
+    -- Create a new empty histogram
     hist <- H.new :: IO (H.BasicHashTable Text Int)
+    -- for line in file:
     eachLine path $ \line -> do
+        -- Break the line into "break" objects
         let breaks = ICU.breaks (ICU.breakWord ICU.Current) line
+            -- Extract the text from each break
             texts = map ICU.brkBreak breaks
+            -- Remove the words that are empty space
             words' = filter (not . T.all (\c -> c == ' ')) texts
-        
+        -- For every word in the line
         forM_ words' $ \word -> do
+            -- Get the count
             count <- H.lookup hist word
+            -- Increment it and put it back
             H.insert hist word $ maybe 1 (+1) count
     return hist
 
