@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xsi:schemaLocation="InvoiceReport" Name="InvoiceReport" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="InvoiceReport">
+  <table1>
+    <Detail_Collection>
+      <Detail TranSource="Invoice"
+        AccountNum="1234-00"
+        AcctDescription="ACCOUNT DESCRIPTION GOES HERE                      "
+        VendorNum="VEN100         "
+        VendorName="VENDOR NAME REALLY GOES HERE                                     "
+        InvNum="12-34-5678           "
+        SysInvNum="0000000000001    "
+        InvLineNum="1"
+        InvDate="2014-01-01T00:00:00"
+        RcptNum="0000000000001    "
+        RcptLineNum="1"
+        PONum="TX123456         "
+        ItemNum="ITEM NAME AND TYPE HERE      "
+        Description="LONG ITEM DESCRIPTION REALLY GOES HERE                                                               "
+        InvQty="1.00000"
+        InvUnitCost="12345.00000"
+        Amount="-5008.00000"
+        DateRcvd="2014-01-01T00:00:00"
+        SUBTOTAL="12346.00000"
+        DiscAmt="0.00000"
+        FrtAmt="0.00000"
+        MiscAmt="0.00000"
+        TaxAmt="0.00000"
+        VoucherNum="00000000000000007    "
+        CNTRLTYP="0"
+        DCSTATUS="3"
+        DOCTYPE="1"
+        DOCNUMBR="12-34-5678           "
+        ACTINDX="220"
+        />
+    </Detail_Collection>
+  </table1>
+</Report>
