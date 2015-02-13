@@ -45,6 +45,15 @@ eachLine path lineProc = do
                 lineProc line
                 me
 
+-- # Step two, find the popularity of sets
+data  FPTree =  FPTree Text Int         [FPTree]
+data MFPTree = MFPTree Text (IORef Int) [IORef MFPTree]
+
+addItem :: [Text] -> FPTree -> IO ()
+addItem items tree = do
+    let ordered_items = sort items
+    addOneTree 
+
 main = do
     path:_ <- getArgs
     hist <- takeHistogram path
