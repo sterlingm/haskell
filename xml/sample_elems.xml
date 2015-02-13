@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<new_tag xsi:schemaLocation="QuarterlyGLHistoryYear" Name="QuarterlyGLHistoryYear" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="QuarterlyGLHistoryYear">
+  <textbox23>10/5/2014 to 12/31/2014</textbox23>
+  <table1>
+    <Detail_Collection>
+      <Detail>
+        <trs>GLD</trs>
+        <anum>1234-00</anum>
+        <actd>ACCOUNT DESCRIPTION                                </actd>
+        <yr>2014</yr>
+        <je>1234567</je>
+        <tdt>2014-01-01T00:00:00</tdt>
+        <sdoc>SDOCHERE   </sdoc>
+        <dsc>A LONG DESCRIPTION MAY BE HERE </dsc>
+        <et></et>
+        <srs>6</srs>
+        <ttn>0</ttn>
+        <ctlnum></ctlnum>
+        <vnum></vnum>
+        <vnam></vnam>
+        <amt>-5196.00</amt>
+        <odoc></odoc>
+        <pdt>1900-01-01T00:00:00</pdt>
+        <aidx>89</aidx>
+        <nat>2314 </nat>
+        <div>00   </div>
+        <bus></bus>
+        <dpt></dpt>
+      </Detail>
+    </Detail_Collection>
+  </table1>
+</new_tag>
+
