@@ -45,6 +45,7 @@ eachLine path lineProc = do
     -- In most languages, like Scala or C++, all functions are actually this type.
     -- You can see how it incourages sharing state, which can be faster or slower.
     withFile path ReadWriteMode $ \handle ->
+        -- Fix passes the function to itself so it can recurse.
         fix $ \me -> do
             done <- hIsEOF handle
             unless done $ do
